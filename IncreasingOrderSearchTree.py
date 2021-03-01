@@ -1,3 +1,11 @@
+'''
+Given the root of a binary search tree, 
+rearrange the tree in in-order so that 
+the leftmost node in the tree is now the 
+root of the tree, and every node has no 
+left child and only one right child.
+
+'''
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -5,13 +13,14 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+# Using recursion
 class Solution(object):
     def increasingBST(self, root):
         """
         :type root: TreeNode
         :rtype: TreeNode
         """
-        #using recursion
+        
         def trBST(root,ans):
             if not root:
                 return None
